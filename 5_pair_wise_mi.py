@@ -32,7 +32,7 @@ def class_feature_MI(X, y):
 	max_mi = 0
 
 	# writing in a file (class - feature MI)
-	f_class_feat = open('All_Class_feature_MI_down.txt', 'w')
+	f_class_feat = open('All_Class_feature_MI.txt', 'w')
 
 	for i in range(feature_size):
 		feat_i = X.iloc[:, i].tolist()
@@ -75,13 +75,13 @@ def main():
 		H_dict[gene_names[i]] = h_x
 
 	# write the entropy values for each gene in a file
-	f_h = open('All_Gene_entropy_values_down.txt', 'w')
+	f_h = open('All_Gene_entropy_values.txt', 'w')
 	for key in H_dict:
 		f_h.write(str(key) + '\t' + str(H_dict[key]) + '\n')
 	f_h.close()
 
 	# first compute all gene pair mutual information
-	f_pair_mi = open('All_Gene_pair_MI_down.txt', 'w')
+	f_pair_mi = open('All_Gene_pair_MI.txt', 'w')
 	MI_mat = np.zeros((feature_size, feature_size))
 
 	for i in range(0, feature_size):
@@ -103,7 +103,7 @@ def main():
 	f_pair_mi.close()
 
 	# write the pair-wise MI values in a file
-	f_mi = open('All_Pair_wise_gene_MI_down.txt', 'w')
+	f_mi = open('All_Pair_wise_gene_MI.txt', 'w')
 	for i in range(feature_size):
 		for j in range(feature_size):
 			f_mi.write(str(MI_mat[i, j]) + '\t')

@@ -58,10 +58,11 @@ def greedy_feature_selection(gene_names, class_feat_mi_dict, Gene_pair_MI_dict, 
 
 	return gene_names[gene_index]
 
-def write_selected_genes_to_file(S, t):
+def write_selected_genes_to_file(S, t = 0.55):
 
 	# writing the selected genes to file for classification
-	f_sel_gene = open('Final_feature_set_' + str(t) + '.txt', 'w')
+	# f_sel_gene = open('Final_feature_set_' + str(t) + '.txt', 'w')
+	f_sel_gene = open('Final_feature_set.txt', 'w')
 	for i in range(len(S)):
 		f_sel_gene.write(str(S[i]) + '\n')
 	f_sel_gene.close()
@@ -69,7 +70,7 @@ def write_selected_genes_to_file(S, t):
 def main():
 	# pair_wise_mi_file = sys.argv[1]		# pair_wise_mi_dict.txt file
 	selected_genes_file = sys.argv[1]	# selected_genes.txt file
-	sim_threshold = sys.argv[2]			# this is temporary
+	# sim_threshold = sys.argv[2]			# this is temporary
 	# class_feat_mi_file = sys.argv[3]	# class_feat_mi.txt file
 
 	# list for selected feature

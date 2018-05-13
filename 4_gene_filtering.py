@@ -105,7 +105,7 @@ def main():
 
 	# read gene snp count file
 	gene_snp_count_dict = dict()
-	with open('gene_snp_frequency_down.txt') as f:
+	with open('gene_snp_frequency.txt') as f:
 		for line in f:
 			line = line.strip()
 			cols = line.split()
@@ -125,7 +125,7 @@ def main():
 
 	# plot_gene_MI()
 
-	f_gene = open('selected_genes_down.txt', 'w')
+	f_gene = open('selected_genes.txt', 'w')
 	selected_genes = list()
 	for key in cluster_gene_mi_dict:
 		# print(key, cluster_gene_mi_dict[key])

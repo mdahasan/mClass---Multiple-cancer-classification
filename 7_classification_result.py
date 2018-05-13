@@ -112,10 +112,11 @@ def main():
 	data_file = sys.argv[1]		# data file containing all snps info (all_data.txt)
 	filtered_gene_file = sys.argv[2]	# filtered gene file (Final_feature.txt)
 	number_of_feature = sys.argv[3]		# number of features to be selected for classification
-	dist_threshold = sys.argv[4]		# temporary (55, 60, 65, ..., 75)
+	# dist_threshold = sys.argv[4]		# temporary (55, 60, 65, ..., 75)
 
 	# file to store ffs results
-	f_cv_ffs = open('FFS_cv_acc_' + str(dist_threshold) + '.txt', 'w')
+	# f_cv_ffs = open('FFS_cv_acc_' + str(dist_threshold) + '.txt', 'w')
+	f_cv_ffs = open('FFS_cv_acc.txt', 'w')
 
 	original_X = pd.read_table(data_file, sep = '\t', header = 'infer')
 	original_y = original_X['Cancer_type'].values

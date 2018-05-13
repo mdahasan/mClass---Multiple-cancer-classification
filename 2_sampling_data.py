@@ -30,7 +30,7 @@ def combine_all_resampled_dataset():
 		df_list.append(X)
 
 	all_data = pd.concat(df_list)
-	all_data.to_csv('all_data_down.txt', sep = '\t', header = True, index = False)
+	all_data.to_csv('all_data.txt', sep = '\t', header = True, index = False)
 
 def main():
 	# read each of the cancer data file and do subsampling by
