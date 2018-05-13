@@ -1,0 +1,4 @@
+mClass+LG	0.675
+DeepGene (CGF + ISR)	0.655
+DeepGene (CGF)	0.638
+DeepGene (ISR)	0.649	
